@@ -1,0 +1,28 @@
+/* General Blueprint Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+.hidden {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* Main styles */
+.main {
+    font-family: Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+	color: #CECECE;
+	background: #2A2B30;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: none;
+	color: #f0f0f0;
+	outline: none;
+}
+
+a:hover {
+	color: #5C5EDC;
+}

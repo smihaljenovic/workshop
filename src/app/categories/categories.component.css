@@ -1,0 +1,232 @@
+/* Fixed bottom bar */
+
+.bar {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 1.75em 5em;
+	text-align: center;
+	background: #191a1b;
+	-webkit-transform: translate3d(0, 0, 0);
+	/* Fix for Chrome flicker on Mac ...party like we're in 2012! */
+}
+
+.flexbox .filter {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+.action {
+	font-family: Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-size: 1.05em;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: .25em;
+	cursor: pointer;
+	color: #fff;
+	border: none;
+	background: none;
+}
+
+.action:focus {
+	outline: none;
+}
+
+.action--button {
+	color: #5c5edc;
+}
+
+.no-touch .action--button:hover {
+	color: #fff;
+	outline: none;
+}
+
+
+/* Filter */
+
+.filter__label {
+	font-size: .85em;
+	display: inline-block;
+	margin: 0 2%;
+	font-weight: bold;
+	color: #393A3F;
+}
+
+.filter__item {
+	font-weight: bold;
+	margin: 0 2%;
+	padding: .1em;
+	vertical-align: middle;
+	color: #a3a3b3;
+	border-bottom: 2px solid transparent;
+}
+
+.filter__item--selected {
+	color: #5c5edc;
+	border-color: #5c5edc;
+}
+
+.filter__item .icon {
+	font-size: 1.75em;
+	display: none;
+}
+
+/* Shopping cart */
+
+.cart {
+	font-size: 1.5em;
+	position: absolute;
+	top: 0;
+	right: 0;
+	overflow: hidden;
+	height: 100%;
+	padding: 0 1.195em;
+	cursor: pointer;
+	color: #abacae;
+	border: none;
+    background-color: #131415;
+    outline: none;
+}
+
+.no-touch .cart:focus,
+.no-touch .cart:hover {
+	color: #fff;
+	outline: none;
+}
+
+.cart--animate .cart__icon {
+	-webkit-animation: cartAnim .4s forwards;
+	animation: cartAnim .4s forwards;
+}
+
+@-webkit-keyframes cartAnim {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(50px, 0, 0);
+		transform: translate3d(50px, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-50px, 0, 0);
+		transform: translate3d(-50px, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes cartAnim {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(50px, 0, 0);
+		transform: translate3d(50px, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-50px, 0, 0);
+		transform: translate3d(-50px, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.cart__count {
+	font-size: 9px;
+	font-weight: bold;
+	line-height: 15px;
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	width: 15px;
+	height: 15px;
+	margin: -16px 0 0 0;
+	text-align: center;
+	color: #fff;
+	border-radius: 50%;
+	background: #5c5edc;
+}
+
+.cart--animate .cart__count {
+	-webkit-animation: countAnim .4s forwards;
+	animation: countAnim .4s forwards;
+}
+
+@-webkit-keyframes countAnim {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 80px, 0);
+		transform: translate3d(0, 80px, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -80px, 0);
+		transform: translate3d(0, -80px, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes countAnim {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 80px, 0);
+		transform: translate3d(0, 80px, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -80px, 0);
+		transform: translate3d(0, -80px, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@media screen and (max-width: 50em) {
+	.bar {
+		padding-left: 0;
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 40em) {
+	.bar {
+		padding: .5em 4.5em .5em 0;
+	}
+	.flexbox .filter {
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+	}
+	.filter__item {
+		height: 100%;
+		padding: .5em .1em;
+		border: none;
+	}
+	.filter__item .icon {
+		display: inline-block;
+	}
+	.filter__label,
+	.action__text {
+		display: none;
+	}
+	.cart {
+		padding: 0 1em;
+	}
+}

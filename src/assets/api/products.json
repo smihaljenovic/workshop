@@ -1,0 +1,187 @@
+[
+    {
+        "id": 1,
+        "title": "Red shirt",
+        "brand": "angular",
+        "category": 1,
+        "price": 19.99,
+        "sizes": ["s", "m", "l"],
+        "image": "shirt1.png",
+        "featured": false
+    },
+    {
+        "id": 2,
+        "title": "Sticker #1",
+        "brand": "angular",
+        "category": 3,
+        "price": 2.99,
+        "image": "sticker1.png",
+        "featured": false
+    },
+    {
+        "id": 3,
+        "title": "Sticker #2",
+        "brand": "angularjs",
+        "category": 3,
+        "price": 2.99,
+        "image": "sticker2.png",
+        "featured": false
+    },
+    {
+        "id": 4,
+        "title": "Black shirt",
+        "brand": "angular",
+        "category": 1,
+        "price": 19.99,
+        "image": "shirt2.png",
+        "sizes": ["s", "m", "l", "xl"],
+        "featured": true
+    },
+    {
+        "id": 5,
+        "title": "Gray hoodie #1",
+        "brand": "angular",
+        "category": 2,
+        "price": 29.99,
+        "image": "hoodie2.png",
+        "sizes": ["l", "xl"],
+        "featured": false
+    },
+    {
+        "id": 6,
+        "title": "White hoodie #1",
+        "brand": "angular",
+        "category": 2,
+        "price": 29.99,
+        "image": "hoodie3.png",
+        "sizes": ["s", "m", "xl"],
+        "featured": true
+    },
+    {
+        "id": 7,
+        "title": "Sticker #3",
+        "brand": "ng-europe",
+        "category": 3,
+        "price": 2.99,
+        "image": "sticker5.png",
+        "featured": false
+    },
+    {
+        "id": 8,
+        "title": "Gray shirt",
+        "brand": "angular",
+        "category": 1,
+        "price": 19.99,
+        "sizes": ["s", "m", "l", "xl"],
+        "image": "shirt4.png",
+        "featured": false
+    },
+    {
+        "id": 9,
+        "title": "Sticker #4",
+        "brand": "ng-conf",
+        "category": 3,
+        "price": 2.99,
+        "image": "sticker3.png",
+        "featured": false
+    },
+    {
+        "id": 10,
+        "title": "Sticker #5",
+        "brand": "ng-conf",
+        "category": 3,
+        "price": 2.99,
+        "image": "sticker4.png",
+        "featured": false
+    },
+    {
+        "id": 11,
+        "title": "Black shirt",
+        "brand": "ng-europe",
+        "category": 1,
+        "price": 19.99,
+        "image": "shirt6.png",
+        "sizes": ["s", "l", "xl"],
+        "featured": false
+    },
+    {
+        "id": 12,
+        "title": "Black hoodie #1",
+        "brand": "angular",
+        "category": 2,
+        "price": 29.99,
+        "image": "hoodie1.png",
+        "sizes": ["s", "m", "l", "xl"],
+        "featured": false
+    },
+    {
+        "id": 13,
+        "title": "White hoodie #2",
+        "brand": "angular",
+        "category": 2,
+        "price": 29.99,
+        "image": "hoodie4.png",
+        "sizes": ["m", "l", "xl"],
+        "featured": false
+    },
+    {
+        "id": 14,
+        "title": "White shirt #1",
+        "brand": "ng-conf",
+        "category": 1,
+        "price": 19.99,
+        "image": "shirt5.png",
+        "sizes": ["s", "m", "l", "xl"],
+        "featured": false
+    },
+    {
+        "id": 15,
+        "title": "White shirt #2",
+        "brand": "angular",
+        "category": 1,
+        "price": 19.99,
+        "image": "shirt3.png",
+        "sizes": ["m", "l"],
+        "featured": true
+    },
+    {
+        "id": 16,
+        "title": "Black hoodie #2",
+        "brand": "ng-conf",
+        "category": 2,
+        "price": 29.99,
+        "image": "hoodie5.png",
+        "sizes": ["l", "xl"],
+        "featured": false
+    },
+    {
+        "id": 17,
+        "title": "Gray hoodie #2",
+        "brand": "ng-europe",
+        "category": 2,
+        "price": 29.99,
+        "image": "hoodie6.png",
+        "sizes": ["m", "l", "xl"],
+        "featured": false
+    },
+    {
+        "id": 18,
+        "title": "Gray shirt #3",
+        "brand": "ng-europe",
+        "category": 1,
+        "price": 19.99,
+        "image": "shirt7.png",
+        "sizes": ["s", "l", "xl"],
+        "featured": false
+    },
+    {
+        "id": 19,
+        "title": "Black shirt #3",
+        "brand": "ng-conf",
+        "category": 1,
+        "price": 19.99,
+        "image": "shirt8.png",
+        "sizes": ["m", "l", "xl"],
+        "featured": false
+    }
+]

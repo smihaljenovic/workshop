@@ -2,8 +2,8 @@
 <div class="bar">
     <div class="filter">
       <span class="filter__label">Category: </span>
-      <button class="action filter__item " data-filter="*" (click)="setCategory('')" [ngClass]="{'filter__item--selected': (selectedCategory | async) == ''}">All</button>
-      <button *ngFor="let category of categories" class="action filter__item" data-filter=".jackets" (click)="setCategory(category)" [ngClass]="{'filter__item--selected': (selectedCategory | async) == category}"><i class="icon icon--jacket"></i><span class="action__text">{{category}}</span></button>
+      <button class="action filter__item " data-filter="*" (click)="setCategory(null)" [ngClass]="{'filter__item--selected': (selectedCategory | async) === null}">All</button>
+      <button *ngFor="let category of _category.categories" class="action filter__item" data-filter=".jackets" (click)="setCategory(category)" [ngClass]="{'filter__item--selected': (selectedCategory | async) == category}"><i class="icon icon--jacket"></i><span class="action__text">{{category.name}}</span></button>
     </div>
     <app-cart></app-cart>
   </div>

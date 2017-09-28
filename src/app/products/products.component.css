@@ -224,6 +224,7 @@
 	padding: 0;
 	border-radius: 5px;
 	background: #24252a;
+	position: relative;
 }
 
 .no-touch .slider {
@@ -253,6 +254,45 @@
 
 .slider .flickity-page-dots .dot {
 	background: #131417;
+}
+
+.slider .slider__overlay {
+	opacity: 0;
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	background: rgba(0,0,0,0.25);
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	-webkit-transition: opacity .3s, -webkit-transform .3s;
+	transition: opacity .3s, transform .3s;
+}
+
+.slider .slider__overlay select {
+	height: 3rem;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.slider:hover .slider__overlay {
+	opacity: 1;
+}
+
+.action-add-to-cart {
+	border-radius: 1px;
+    background: #517cad;
+    display: inline-block;
+	width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+}
+
+.action-add-to-cart:hover {
+	background: #426a98;
 }
 
 /* Product meta */

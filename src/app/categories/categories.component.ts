@@ -10,7 +10,6 @@ import { BehaviorSubject } from 'Rxjs';
 export class CategoriesComponent implements OnInit {
 
   selectedCategory: BehaviorSubject<string>;
-  categories: string[];
 
   constructor(
     private _category: CategoryService
@@ -18,7 +17,6 @@ export class CategoriesComponent implements OnInit {
 
   ngOnInit() {
     this.selectedCategory = this._category.selectedCategory;
-    this.categories = this._category.categories;
   }
 
   setCategory(category: string) {

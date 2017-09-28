@@ -27,8 +27,8 @@
 
 .checkout--active .checkout__button {
 	cursor: default;
-	-webkit-transform: translate3d(-490%, 0, 0);
-	transform: translate3d(-490%, 0, 0);
+	-webkit-transform: translate3d(-630%, 0, 0);
+	transform: translate3d(-630%, 0, 0);
 }
 
 .checkout__button:focus {
@@ -43,6 +43,19 @@
 	font-size: 1.25em;
 }
 
+.checkout__count {
+	position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    width: 25px;
+    height: 25px;
+    background: #1976d2;
+    line-height: 24px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+}
+
 .checkout__icon {
 	display: block;
 	margin: 0 auto;
@@ -54,7 +67,7 @@
 	right: 0;
 	overflow: hidden;
 	max-width: 100vw;
-	width: 400px;
+	width: 500px;
 	text-align: right;
 	pointer-events: none;
 }

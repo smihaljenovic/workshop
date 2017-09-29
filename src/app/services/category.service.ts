@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'Rxjs';
 import { ApiService } from './api.service';
 import { Observable } from 'rxjs/Observable';
+import { Category } from '../classes/category';
 
 @Injectable()
 export class CategoryService {
 
-  categories: any[];
-  selectedCategory: BehaviorSubject<any> = new BehaviorSubject(null);
+  categories: Category[];
+  selectedCategory: BehaviorSubject<Category> = new BehaviorSubject(null);
   loaded: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   constructor(
@@ -16,13 +17,13 @@ export class CategoryService {
     this.loadCategories();
   }
 
-  setCategory(category: string) {
+  setCategory(category: Category) {
     this.selectedCategory.next(category);
   }
 
   loadCategories() {
     return this._api.get('assets/api/categories.json').subscribe(data => {
-      this.categories = data;
+      this.categories = data.map(item => new Category(item));
       this.loaded.next(true);
     })
   }

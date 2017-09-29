@@ -21,16 +21,16 @@
           <tfoot>
               <tr>
                 <th></th>
-                <th colspan="2">Total <span class="checkout__total">$9.99</span></th>
+                <th colspan="2">Total <span class="checkout__total">${{cart.getTotal() | number: '1.2'}}</span></th>
                 <th></th>
               </tr>
           </tfoot>
           <tbody>
-            <tr>
-              <td>Product Name <span>Product Brand</span></td>
-              <td>1</td>
-              <td>$9.99</td>
-              <td><a><i class="fa fa-trash"></i></a></td>
+            <tr *ngFor="let cartItem of cart.items">
+              <td>{{cartItem.product.title}} <span>{{cartItem.product.brand}}</span></td>
+              <td>{{cartItem.qty}}</td>
+              <td>${{cartItem.subtotal}}</td>
+              <td><a (click)="cart.removeFromCart()"><i class="fa fa-trash"></i></a></td>
             </tr>
         </tbody>
       </table><!-- /checkout__summary -->

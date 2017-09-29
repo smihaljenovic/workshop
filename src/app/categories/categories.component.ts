@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../services/category.service';
 import { BehaviorSubject } from 'Rxjs';
+import { Category } from '../classes/category';
 
 @Component({
   selector: 'app-categories',
@@ -9,7 +10,7 @@ import { BehaviorSubject } from 'Rxjs';
 })
 export class CategoriesComponent implements OnInit {
 
-  selectedCategory: BehaviorSubject<string>;
+  selectedCategory: BehaviorSubject<Category>;
 
   constructor(
     private _category: CategoryService
@@ -19,7 +20,7 @@ export class CategoriesComponent implements OnInit {
     this.selectedCategory = this._category.selectedCategory;
   }
 
-  setCategory(category: string) {
+  setCategory(category: Category) {
     this._category.setCategory(category);
   }
 

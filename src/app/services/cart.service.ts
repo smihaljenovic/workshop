@@ -6,7 +6,8 @@ export class CartService {
 
   isOpen: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
-  constructor() { }
+  constructor() { 
+  }
 
   openCart() {
     this.isOpen.next(true);

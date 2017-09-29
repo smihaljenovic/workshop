@@ -10,6 +10,7 @@ import { ProductService } from './services/product.service';
 import { ApiService } from './services/api.service';
 import { CategoriesComponent } from './categories/categories.component';
 import { CategoryService } from './services/category.service';
+import { DecimalPipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CategoryService } from './services/category.service';
     CartService,
     ProductService,
     CategoryService,
-    ApiService
+    ApiService,
+    DecimalPipe
   ],
   bootstrap: [AppComponent]
 })

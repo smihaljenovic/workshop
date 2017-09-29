@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../services/cart.service';
 import { BehaviorSubject } from 'Rxjs';
+import { CartItem } from '../classes/cart-item';
+import { Cart } from '../classes/cart';
 
 @Component({
   selector: 'app-cart',
@@ -10,6 +12,7 @@ import { BehaviorSubject } from 'Rxjs';
 export class CartComponent implements OnInit {
 
   isOpen: BehaviorSubject<boolean>;
+  cart: any;
 
   constructor(
     private _cart: CartService
@@ -17,6 +20,7 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.isOpen = this._cart.isOpen;
+    this.cart = Cart;
   }
 
   openCart() {

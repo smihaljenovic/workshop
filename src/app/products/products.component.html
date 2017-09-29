@@ -7,12 +7,12 @@
     <!-- Grid sizer for a fluid Isotope (Masonry) layout -->
     <div class="grid__sizer"></div>
     <!-- Grid items -->
-    <div *ngFor="let product of _product.products" class="grid__item category_{{product.category}}" [ngClass]="{'grid__item--size-a': product.featured}">
+    <div *ngFor="let product of _product.products" class="grid__item category_{{product.category.id}}" [ngClass]="{'grid__item--size-a': product.featured}">
       <div class="slider">
         <div class="slider__item"><img src="assets/images/{{product.image}}" alt="{{product.title}}" /></div>
         <div class="slider__overlay">
           <div *ngIf="product.sizes"><select><option *ngFor="let size of product.sizes">{{size}}</option></select></div>
-          <a class="action-add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+          <a class="action-add-to-cart" (click)="product.addToCart()"><i class="fa fa-shopping-cart"></i></a>
         </div>
       </div>
       <div class="meta">

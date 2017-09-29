@@ -1,6 +1,5 @@
 import { Product } from './product';
 import { Category } from './category';
-import { Size } from './size.enum';
 import { Cart } from './cart';
 
 export class Shirt extends Product {

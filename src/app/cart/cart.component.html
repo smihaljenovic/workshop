@@ -30,7 +30,7 @@
               <td>{{cartItem.product.title}} <span>{{cartItem.product.brand}}</span></td>
               <td>{{cartItem.qty}}</td>
               <td>${{cartItem.subtotal}}</td>
-              <td><a (click)="cart.removeFromCart()"><i class="fa fa-trash"></i></a></td>
+              <td><a (click)="cart.removeFromCart(cartItem)"><i class="fa fa-trash"></i></a></td>
             </tr>
         </tbody>
       </table><!-- /checkout__summary -->
